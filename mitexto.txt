@@ -1,0 +1,20 @@
+TEXTO DE PRUEBA PARA LA LECTURA DESDE LA MEMORIA SD....
+
+# solo es texto...
+else {
+     File externalDir = Environment.getExternalStorageDirectory();
+     File textFile = new File(externalDir.getAbsolutePath() + File.separator + "mitexto.txt");
+
+     try {
+         writeTextFile(textFile, "esto es un test, jajaja");
+         String text = readTextFile(textFile);
+         textView.setText(text);
+
+         if (!textFile.delete()) {
+             textView.setText("no se puede remover temporalmente el arhivo");
+         }
+     }
+     catch (IOException e) {
+         textView.setText("ocurrio algun problema! " + e.getMessage());
+     }
+}
