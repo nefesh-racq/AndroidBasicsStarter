@@ -1,0 +1,12 @@
+package com.example.nova.program1;
+
+import android.app.Activity;
+import android.content.res.AssetManager;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+este es un texto de prueba para la lectura de archivos....!
